@@ -15,7 +15,7 @@ Dataset include:
 - Maximum capacity of each spatial layout per floor
 - Initial occupant distribution per room or floor
 
-Due to privacy and institutional policy, the raw building layout may be abstracted into a graph based representation in the public version of this repository.
+**Due to privacy and institutional policy, the raw building layout may be abstracted into a graph based representation in the public version of this repository.**
 
 ## 🧠Project Design Thinking
 This section outlines the systematic thinking behind the project, from problem formulation to algorithmic implementation.
@@ -45,7 +45,14 @@ To simplify the complexity of the real-world evacuation dynamics, the following 
 ### b. Multiobjective Optimization Using NSGA-II
 
 ## 📊Result & Insight
+After running the NSGA-II algorithm for multiple generations, the project successfully identified a set of Pareto optimal evacuation route configurations. These solutions offer an alternatives between shorter evacuation times and lower congestion levels.
 
+Key insight:
+- Routes that minimize total travel time tend to funnel evacuees through the same shorthest paths, which leads to high congestion, especially at staircases and narrow corridors.
+- In contrast, routes that reduce congestion distribute evacuees through alternative or longer paths, slightly increasing travel time but avoiding bottlenecks.
+- A balanced evacuation plan lies between these two extremes, offering acceptable travel time while significantly reducing potensial crowding.
+
+This Pareto front gives decision makers flexibility: they can choose an evacuation plan based on the real time priority.
 
 ## 🚀Future Work
 Although the proposed system shows promising results, several limitations remain and open up opportunities for further development.
@@ -54,11 +61,11 @@ Future Enhancements:
 - Dynamic Evacuation Modeling: Incorporate time-varying hazard maps (e.g., fire spread simulation).
 - Behavioral Simulation: Integrate agent-based modeling to reflect realistic human responses.
 
+## 📖References
+All references for this project can you see in this link [References](https://github.com/nizma123/EvacuationRouteDeterminationForHighRiseBuildingsUsingNSGA-II/blob/main/References/References.pdf)
+
 ## 🙏Acknowledgements
 Special thanks to:
 - Thesis Advisor, for guidance throughout the research.
 - UPI Postgraduate School: For providing access to building layout data.
 - All contributors and peers who supported during the development of this project.
-
-## References
-All references for this project can you see in this link [References]
